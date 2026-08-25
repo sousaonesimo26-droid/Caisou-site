@@ -1,0 +1,6 @@
+{
+  "name": "CAISOU - Comércio e Serviços",
+  "description": "Soluções em Laboratórios Educacionais, Clínico-Hospitalares, Infraestrutura de TI e CAISOU Academy.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

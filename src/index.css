@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-brand-blue {
+    color: #0d4b9f;
+  }
+  .text-brand-green {
+    color: #1b8343;
+  }
+  .bg-brand-blue {
+    background-color: #0d4b9f;
+  }
+  .bg-brand-green {
+    background-color: #1b8343;
+  }
+  .border-brand-blue {
+    border-color: #0d4b9f;
+  }
+  .border-brand-green {
+    border-color: #1b8343;
+  }
+}
