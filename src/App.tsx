@@ -11,7 +11,6 @@ import { QuickQuoteForm } from './components/QuickQuoteForm';
 import { ContactFooter } from './components/ContactFooter';
 import { ProductDetailModal } from './components/ProductDetailModal';
 import { QuoteBuilderModal } from './components/QuoteBuilderModal';
-import { CloudflareHugoGuideModal } from './components/CloudflareHugoGuideModal';
 import { productsData } from './data/productsData';
 import { Product, QuoteItem } from './types';
 
@@ -31,7 +30,6 @@ export default function App() {
   const [searchTerm, setSearchTerm] = useState<string>('');
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [isQuoteBuilderOpen, setIsQuoteBuilderOpen] = useState(false);
-  const [isCloudflareGuideOpen, setIsCloudflareGuideOpen] = useState(false);
 
   // Quote Cart Management Functions
   const handleAddToQuote = (
@@ -123,7 +121,6 @@ export default function App() {
       <Navbar
         quoteItems={quoteItems}
         onOpenQuoteBuilder={() => setIsQuoteBuilderOpen(true)}
-        onOpenCloudflareGuide={() => setIsCloudflareGuideOpen(true)}
         onSelectCategory={(cat) => {
           setSelectedCategory(cat);
           scrollToSection('catalogo');
@@ -185,7 +182,6 @@ export default function App() {
 
       {/* Footer */}
       <ContactFooter
-        onOpenCloudflareGuide={() => setIsCloudflareGuideOpen(true)}
         onSelectCategory={(cat) => {
           setSelectedCategory(cat);
           scrollToSection('catalogo');
@@ -214,11 +210,6 @@ export default function App() {
           onClearQuote={handleClearQuote}
           onAddProductQuick={handleAddProductById}
         />
-      )}
-
-      {/* Cloudflare Pages & Hugo Guide Modal */}
-      {isCloudflareGuideOpen && (
-        <CloudflareHugoGuideModal onClose={() => setIsCloudflareGuideOpen(false)} />
       )}
     </div>
   );

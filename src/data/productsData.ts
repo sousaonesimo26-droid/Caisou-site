@@ -1,4 +1,7 @@
 import { Product } from '../types';
+import micEdu1000Img from '../assets/images/caisou_mic_edu1000_1787751369856.jpg';
+import physExpImg from '../assets/images/caisou_phys_exp_1787751392496.jpg';
+import cent5000Img from '../assets/images/caisou_cent_5000_1787751413929.jpg';
 
 export const productsData: Product[] = [
   // --- EDUCACIONAL (Escolas e Universidades) ---
@@ -25,7 +28,7 @@ export const productsData: Product[] = [
     ],
     targetAudience: ['Escolas de Ensino Fundamental/Médio', 'Universidades', 'Cursos Técnicos de Saúde'],
     certifications: ['ISO 9001', 'CE Certified', 'Garantia CAISOU 360°'],
-    image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80',
+    image: micEdu1000Img,
     featured: true,
     modelCode: 'CAISOU-MIC-EDU1000',
     warranty: '36 meses com calibração anual inclusa',
@@ -79,7 +82,7 @@ export const productsData: Product[] = [
     ],
     targetAudience: ['Ensino Médio / Secundário', 'Institutos Politécnicos', 'Engenharias e Física Universitária'],
     certifications: ['CE', 'Segurança Elétrica IEC 61010'],
-    image: 'https://images.unsplash.com/photo-1581093458791-9f3c3900df4b?auto=format&fit=crop&w=800&q=80',
+    image: physExpImg,
     featured: false,
     modelCode: 'CAISOU-PHYS-EXP',
     warranty: '24 meses',
@@ -137,7 +140,7 @@ export const productsData: Product[] = [
     ],
     targetAudience: ['Laboratórios Hospitalares', 'Clínicas e Postos de Saúde', 'Bancos de Sangue'],
     certifications: ['ISO 13485', 'ISO 9001', 'IEC 61010-2-020', 'CE'],
-    image: 'https://images.unsplash.com/photo-1583912267670-6575ad4736f8?auto=format&fit=crop&w=800&q=80',
+    image: cent5000Img,
     featured: false,
     modelCode: 'CAISOU-CENT-5000',
     warranty: '36 meses de garantia estrutural',

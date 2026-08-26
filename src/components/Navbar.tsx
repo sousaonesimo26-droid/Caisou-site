@@ -13,7 +13,6 @@ import {
   Server,
   ShieldCheck,
   Headphones,
-  Cloud,
   ChevronDown
 } from 'lucide-react';
 import { QuoteItem } from '../types';
@@ -21,7 +20,6 @@ import { QuoteItem } from '../types';
 interface NavbarProps {
   quoteItems: QuoteItem[];
   onOpenQuoteBuilder: () => void;
-  onOpenCloudflareGuide: () => void;
   onSelectCategory: (category: string) => void;
   searchTerm: string;
   onSearchChange: (value: string) => void;
@@ -30,7 +28,6 @@ interface NavbarProps {
 export const Navbar: React.FC<NavbarProps> = ({
   quoteItems,
   onOpenQuoteBuilder,
-  onOpenCloudflareGuide,
   onSelectCategory,
   searchTerm,
   onSearchChange,
@@ -88,20 +85,11 @@ export const Navbar: React.FC<NavbarProps> = ({
 
           <div className="flex items-center gap-3">
             <button
-              onClick={onOpenCloudflareGuide}
-              className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-blue-900/60 hover:bg-blue-800 text-blue-200 border border-blue-700/50 transition-colors text-[11px] font-medium"
-              title="Informações de Deploy Cloudflare & Hugo"
-            >
-              <Cloud className="w-3.5 h-3.5 text-amber-400" />
-              Cloudflare Pages Ready
-            </button>
-            <span className="text-blue-400/40">|</span>
-            <button
               onClick={() => scrollToSection('suporte-tecnico')}
-              className="inline-flex items-center gap-1 text-slate-300 hover:text-emerald-400 transition-colors font-medium"
+              className="inline-flex items-center gap-1 text-slate-300 hover:text-emerald-400 transition-colors font-medium text-xs"
             >
               <Headphones className="w-3.5 h-3.5 text-emerald-400" />
-              Suporte & Chamados
+              Suporte & Chamados Técnicos
             </button>
           </div>
         </div>
@@ -393,17 +381,6 @@ export const Navbar: React.FC<NavbarProps> = ({
                 className="w-full py-2.5 px-4 rounded-lg bg-blue-600 text-white font-bold text-center text-sm shadow-sm"
               >
                 Ver Cotação ({totalQuoteCount} itens)
-              </button>
-
-              <button
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  onOpenCloudflareGuide();
-                }}
-                className="w-full py-2 px-3 rounded-lg bg-slate-100 text-slate-700 text-xs font-semibold text-center flex items-center justify-center gap-1.5"
-              >
-                <Cloud className="w-4 h-4 text-amber-500" />
-                Guia de Deploy Cloudflare & Hugo
               </button>
             </div>
           </div>

@@ -13,17 +13,15 @@ import {
   ChevronDown,
   ExternalLink,
   MessageCircle,
-  Cloud
+  Award
 } from 'lucide-react';
 
 interface ContactFooterProps {
-  onOpenCloudflareGuide: () => void;
   onSelectCategory: (category: string) => void;
   onExploreAcademy: () => void;
 }
 
 export const ContactFooter: React.FC<ContactFooterProps> = ({
-  onOpenCloudflareGuide,
   onSelectCategory,
   onExploreAcademy,
 }) => {
@@ -111,8 +109,8 @@ export const ContactFooter: React.FC<ContactFooterProps> = ({
                 <span>Empresa Certificada ISO 9001 • Padrões IANORQ & MINSA</span>
               </div>
               <div className="flex items-center gap-2 text-slate-300">
-                <Cloud className="w-4 h-4 text-sky-400" />
-                <span>Pronto para Deploy no Cloudflare Pages</span>
+                <Award className="w-4 h-4 text-amber-400" />
+                <span>Garantia Local & Assistência Técnica Especializada em Angola</span>
               </div>
             </div>
           </div>
@@ -233,16 +231,6 @@ export const ContactFooter: React.FC<ContactFooterProps> = ({
                 <Clock className="w-4 h-4 text-amber-400 shrink-0" />
                 <span>Segunda a Sexta: 08:00 às 17:30 | Plantão Hospitalar e Técnico 24h</span>
               </div>
-            </div>
-
-            <div className="pt-2 flex gap-2">
-              <button
-                onClick={onOpenCloudflareGuide}
-                className="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-blue-300 text-[11px] font-semibold rounded-lg border border-slate-700 flex items-center gap-1"
-              >
-                <Cloud className="w-3.5 h-3.5 text-amber-400" />
-                Configuração Cloudflare & Hugo
-              </button>
             </div>
           </div>
         </div>
